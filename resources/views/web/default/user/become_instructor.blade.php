@@ -127,5 +127,5 @@
 @push('scripts_bottom')
     <script src="/vendor/laravel-filemanager/js/stand-alone-button.js"></script>
 
-    <script src="/assets/default/js/part/become_instructor.min.js"></script>
+    <script src="/assets/default/js/parts/become_instructor.min.js"></script>
 @endpush
