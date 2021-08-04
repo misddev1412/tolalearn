@@ -9,7 +9,7 @@
 
 @push('scripts_bottom')
     <script>
-        ;(function (){ 
+        (function (){ 
         'use strict'
         var saveSuccessLang = '{{ trans('webinars.success_store') }}';
         }())
