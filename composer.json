@@ -1,0 +1,96 @@
+{
+    "name": "laravel/laravel",
+    "type": "project",
+    "description": "The Laravel Framework.",
+    "keywords": [
+        "framework",
+        "laravel"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": "^7.2.5",
+        "anandsiddharth/laravel-paytm-wallet": "^1.0",
+        "barryvdh/laravel-debugbar": "^3.5",
+        "cashuanony/phpanonymous": "dev-master",
+        "cviebrock/eloquent-sluggable": "v7.0.1",
+        "fideloper/proxy": "^4.2",
+        "fruitcake/laravel-cors": "^1.0",
+        "guzzlehttp/guzzle": "^7.3",
+        "iyzico/iyzipay-php": "^2.0",
+        "joisarjignesh/bigbluebutton": "^1.1",
+        "jorenvanhocht/laravel-share": "^4.0",
+        "kingflamez/laravelrave": "^4.2",
+        "laravel/framework": "^7.0",
+        "laravel/socialite": "^4.4",
+        "laravel/tinker": "^2.0",
+        "laravel/ui": "^2.1",
+        "league/omnipay": "^3.1",
+        "maatwebsite/excel": "^3.1",
+        "macsidigital/laravel-zoom": "^4.1",
+        "melhorenvio/mercadopago-dx-php-laravel": "^1.2",
+        "mews/captcha": "^3.2",
+        "mews/purifier": "^3.3",
+        "midtrans/midtrans-php": "^2.3",
+        "paypal/rest-api-sdk-php": "^1.14",
+        "ptuchik/omnipay-yandex": "^1.0",
+        "razorpay/razorpay": "2.*",
+        "semyonchetvertnyh/omnipay-paysera": "^0.1.0",
+        "shetabit/payment": "^4.0",
+        "spatie/calendar-links": "^1.4",
+        "spatie/laravel-google-calendar": "^3.1",
+        "stripe/stripe-php": "^7.76",
+        "twilio/sdk": "^6.17",
+        "tzsk/payu": "^5.0",
+        "unicodeveloper/laravel-paystack": "1.0.*",
+        "unisharp/laravel-filemanager": "^2.1",
+        "vrajroham/laravel-bitpay": "^3.0"
+    },
+    "require-dev": {
+        "facade/ignition": "^2.0",
+        "fzaninotto/faker": "^1.9.1",
+        "mockery/mockery": "^1.3.1",
+        "nunomaduro/collision": "^4.1",
+        "phpunit/phpunit": "^8.5"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "dont-discover": []
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        },
+        "classmap": [
+            "database/seeds",
+            "database/factories"
+        ],
+        "files": [
+            "app/Helpers/helper.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover --ansi"
+        ],
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "@php artisan key:generate --ansi"
+        ]
+    }
+}

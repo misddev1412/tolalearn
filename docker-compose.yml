@@ -1,0 +1,12 @@
+version: '3.3'
+
+services:
+    tolalearn:
+        build:
+            context: ./
+            dockerfile: Dockerfile
+        volumes:
+            - ./:/var/www/html/tolalearn
+        links:
+            - "mysql:mysql3"
+    

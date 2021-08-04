@@ -1,0 +1,38 @@
+@import "bootstrap/variables";
+@import "panel/dashboard";
+@import "panel/support";
+@import "panel/notifications";
+@import "panel/sidebar";
+
+body {
+    background-color: #fbfbfd;
+}
+
+#panel_app {
+    .nav-icons-or-start-live {
+        .nav-notify-cart-dropdown {
+            display: flex !important;
+        }
+
+        .nav-start-a-live-btn {
+            display: none !important;
+        }
+    }
+}
+
+.table {
+    th{
+        font-weight: 500;
+    }
+}
+
+tbody{
+    tr{
+        transition: all 0.3s ease;
+
+        &:hover{
+            background-color: #fbfbfd !important;
+            transition: all 0.3s ease;
+        }
+    }
+}

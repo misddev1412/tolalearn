@@ -1,0 +1,31 @@
+
+.dropdown-menu {
+    padding: 15px;
+    min-width: 325px;
+    transform: translate3d(0px, 54px, 0px) !important;
+    z-index: 511;
+    border: unset;
+    top: 40%;
+    transition: all 0.1s;
+    overflow: visible !important;
+
+    &.user-profile-dropdown {
+        min-width: 125px;
+
+        .dropdown-item {
+            padding: 5px 0 !important;
+        }
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: -10px;
+        left: 15px;
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid #fff;
+    }
+}
