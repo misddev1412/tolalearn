@@ -7,11 +7,14 @@
             <div class="row">
                 <div class="col-12 col-md-4">
 
-                     @if(empty($selectedWebinar))
+                    @if(empty($selectedWebinar))
                         <div class="form-group mt-25">
                             <label class="input-label">{{ trans('panel.webinar') }}</label>
                             <select name="ajax[webinar_id]" class="js-ajax-webinar_id custom-select">
-                              <option>Paid Plugin</option>
+                                <option {{ !empty($quiz) ? 'disabled' : 'selected disabled' }} value="">{{ trans('panel.choose_webinar') }}</option>
+                                @foreach($webinars as $webinar)
+                                    <option value="{{ $webinar->id }}" {{  (!empty($quiz) and $quiz->webinar_id == $webinar->id) ? 'selected' : '' }}>{{ $webinar->title }}</option>
+                                @endforeach
                             </select>
                         </div>
                     @else
