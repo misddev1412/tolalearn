@@ -44,7 +44,7 @@
 
     <div class="d-flex align-items-center mt-25">
         @foreach($instructor->getBadges() as $badge)
-            <div class="mr-15" data-toggle="tooltip" data-placement="bottom" data-html="true" title="{{ (!empty($badge->badge_id) ? nl2br($badge->badge->description) : nl2br($badge->description)) !!}">
+            <div class="mr-15" data-toggle="tooltip" data-placement="bottom" data-html="true" title="{{ (!empty($badge->badge_id) ? nl2br($badge->badge->description) : nl2br($badge->description)) }}">
                 <img src="{{ !empty($badge->badge_id) ? $badge->badge->image : $badge->image }}" width="32" height="32" alt="{{ !empty($badge->badge_id) ? $badge->badge->title : $badge->title }}">
             </div>
         @endforeach
