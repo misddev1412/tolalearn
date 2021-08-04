@@ -14,5 +14,5 @@
         var saveSuccessLang = '{{ trans('webinars.success_store') }}';
         }())
     </script>
-    <script src="/assets/default/js/panel/quiz.min.js"></script>
+    <script src="/assets/default/js/panel/quiz.min.js?v={{time()}}"></script>
 @endpush
