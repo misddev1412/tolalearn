@@ -11,7 +11,7 @@
             <select name="type" class="custom-select @error('type')  is-invalid @enderror">
                 <option value="webinar" @if(!empty($webinar) and $webinar->isWebinar()) selected @endif>{{ trans('webinars.webinar') }}</option>
                 <option value="course" @if(!empty($webinar) and $webinar->type == 'course') selected @endif>{{ trans('webinars.video_course') }}</option>
-                <option>{{ trans('webinars.text_lesson') }} (Paid Plugin)</option>
+                <option value="text_lesson" @if(!empty($webinar) and $webinar->type == 'text_lesson') selected @endif>{{ trans('webinars.text_lesson') }}</option>
             </select>
 
             @error('type')

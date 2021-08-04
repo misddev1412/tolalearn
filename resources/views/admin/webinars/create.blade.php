@@ -7,11 +7,6 @@
     <link rel="stylesheet" href="/assets/default/vendors/select2/select2.min.css">
     <link rel="stylesheet" href="/assets/default/vendors/bootstrap-tagsinput/bootstrap-tagsinput.min.css">
     <link rel="stylesheet" href="/assets/vendors/summernote/summernote-bs4.min.css">
-    <style>
-        .bootstrap-timepicker-widget table td input {
-            width: 35px !important;
-        }
-    </style>
 @endpush
 
 @section('content')
@@ -49,8 +44,7 @@
                                                 <select name="type" class="custom-select @error('type')  is-invalid @enderror">
                                                     <option value="webinar" @if((!empty($webinar) and $webinar->isWebinar()) or old('type') == \App\Models\Webinar::$webinar) selected @endif>{{ trans('webinars.webinar') }}</option>
                                                     <option value="course" @if((!empty($webinar) and $webinar->isCourse()) or old('type') == \App\Models\Webinar::$course) selected @endif>{{ trans('product.video_course') }}</option>
-                                                    <option>{{ trans('product.text_course') }} (Paid Plugin)</option>
-
+                                                    <option value="text_lesson" @if((!empty($webinar) and $webinar->isTextCourse()) or old('type') == \App\Models\Webinar::$textLesson) selected @endif>{{ trans('product.text_course') }}</option>
                                                 </select>
 
                                                 @error('type')
@@ -791,14 +785,6 @@
 @endsection
 
 @push('scripts_bottom')
-    <script>
-        ;(function (){ 
-        'use strict'
-        var saveSuccessLang = '{{ trans('webinars.success_store') }}';
-        var zoomJwtTokenInvalid = '{{ trans('admin/main.teacher_zoom_jwt_token_invalid') }}';
-        }())
-    </script>
-
     <script src="/assets/default/vendors/sweetalert2/dist/sweetalert2.min.js"></script>
     <script src="/assets/default/vendors/select2/select2.min.js"></script>
     <script src="/assets/default/vendors/moment.min.js"></script>
