@@ -62,8 +62,7 @@
 <script type="text/javascript" src="/assets/default/vendors/simplebar/simplebar.min.js"></script>
 
 <script>
-    ;(function (){ 
-    'use strict'
+  
     var deleteAlertTitle = '{{ trans('public.are_you_sure') }}';
     var deleteAlertHint = '{{ trans('public.deleteAlertHint') }}';
     var deleteAlertConfirm = '{{ trans('public.deleteAlertConfirm') }}';
@@ -72,7 +71,7 @@
     var deleteAlertFail = '{{ trans('public.fail') }}';
     var deleteAlertFailHint = '{{ trans('public.deleteAlertFailHint') }}';
     var deleteAlertSuccessHint = '{{ trans('public.deleteAlertSuccessHint') }}';
-    }())
+  
 </script>
 
 @if(session()->has('toast'))
