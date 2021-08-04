@@ -51,7 +51,7 @@
         const href = $(this).attr('href');
 
         var html = '<div class="">\n' +
-            '    <p class="">' + deleteAlertHint + '</p>\n' +
+            '    <p class="">Are you sure?/p>\n' +
             '    <div class="mt-30 d-flex align-items-center justify-content-center">\n' +
             '        <button type="button" id="swlDelete" data-href="' + href + '" class="btn btn-sm btn-primary">' + deleteAlertConfirm + '</button>\n' +
             '        <button type="button" class="btn btn-sm btn-danger ml-10 close-swl">' + deleteAlertCancel + '</button>\n' +

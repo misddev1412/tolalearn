@@ -94,7 +94,7 @@
 
 @stack('styles_bottom')
 @stack('scripts_bottom')
-<script src="/assets/default/js//parts/main.min.js"></script>
+<script src="/assets/default/js//parts/main.min.js?v={{time()}}"></script>
 
 <script src="/assets/default/js/panel/public.min.js"></script>
 
